@@ -69,5 +69,3 @@ msg.attach(MIMEText(body, 'plain'))
 text = msg.as_string()
 server.sendmail(email, to_email, text)
 server.quit()
-
-#os.remove(str(sys.argv[0]))
