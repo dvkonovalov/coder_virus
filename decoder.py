@@ -19,8 +19,9 @@ def walk(directory, password):
         if os.path.isfile(path):
             try:
                 decrypt(path, password)
-            except:
-                continue
+            except Exception as ex:
+                print(ex)
+
         else:
             walk(path, password)
 
